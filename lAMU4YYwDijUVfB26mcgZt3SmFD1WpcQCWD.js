@@ -127,7 +127,7 @@ function createChatWidget(agentImageUrl, agentName, websiteDeveloper,SupportIcon
 
   const chatButton = document.createElement("button");
   chatButton.className = "chat-button";
-  chatButton.innerHTML ='<i class="${SupportIcon}"></i>';
+  chatButton.innerHTML = `<i class="${SupportIcon}" style="--fa-primary-color: #bd0555; --fa-secondary-color: #bd0555;"></i>`;
   chatButton.onclick = toggleChat;
   document.body.appendChild(chatButton);
 
