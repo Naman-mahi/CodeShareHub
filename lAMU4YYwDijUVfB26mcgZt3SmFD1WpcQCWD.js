@@ -1,7 +1,7 @@
-function createChatWidget(agentImageUrl,agentName,websiteDeveloper) {
-    const widgetContainer = document.createElement("div");
-    widgetContainer.id = "chatWidget";
-    widgetContainer.innerHTML = `
+function createChatWidget(agentImageUrl, agentName, websiteDeveloper,SupportIcon) {
+  const widgetContainer = document.createElement("div");
+  widgetContainer.id = "chatWidget";
+  widgetContainer.innerHTML = `
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
@@ -123,48 +123,50 @@ function createChatWidget(agentImageUrl,agentName,websiteDeveloper) {
             <small>${websiteDeveloper}❣️</small>
         </div>
     `;
-    document.body.appendChild(widgetContainer);
+  document.body.appendChild(widgetContainer);
 
-    const chatButton = document.createElement("button");
-    chatButton.className = "chat-button";
-    chatButton.innerHTML = '<i class="fa-duotone fa-solid fa-headset" style="--fa-primary-color: #bd0555; --fa-secondary-color: #bd0555;"></i>';
-    chatButton.onclick = toggleChat;
-    document.body.appendChild(chatButton);
+  const chatButton = document.createElement("button");
+  chatButton.className = "chat-button";
+  chatButton.innerHTML ='<i class="${SupportIcon}"></i>';
+  chatButton.onclick = toggleChat;
+  document.body.appendChild(chatButton);
 
-    if (sessionStorage.getItem("chatVisible") === "true") {
-        widgetContainer.style.display = "block";
-        chatButton.style.display = "none";
-    }
+  if (sessionStorage.getItem("chatVisible") === "true") {
+    widgetContainer.style.display = "block";
+    chatButton.style.display = "none";
+  }
 
-    loadMessages();
+  loadMessages();
 }
 
 function toggleChat() {
-    const chatWidget = document.getElementById("chatWidget");
-    const isVisible = chatWidget.style.display === "block";
-    chatWidget.style.display = isVisible ? "none" : "block";
-    document.querySelector(".chat-button").style.display = isVisible ? "block" : "none";
-    sessionStorage.setItem("chatVisible", !isVisible);
+  const chatWidget = document.getElementById("chatWidget");
+  const isVisible = chatWidget.style.display === "block";
+  chatWidget.style.display = isVisible ? "none" : "block";
+  document.querySelector(".chat-button").style.display = isVisible
+    ? "block"
+    : "none";
+  sessionStorage.setItem("chatVisible", !isVisible);
 }
 
 function handleKeyPress(event) {
-    if (event.key === "Enter") {
-        sendMessage();
-    }
+  if (event.key === "Enter") {
+    sendMessage();
+  }
 }
 
 function loadMessages() {
-    const messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
-    messages.forEach(msg => {
-        displayMessage(msg.text, msg.sender);
-    });
+  const messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+  messages.forEach((msg) => {
+    displayMessage(msg.text, msg.sender);
+  });
 }
 
 function displayMessage(text, sender) {
-    const messagesContainer = document.getElementById("messages");
-    const messageDiv = document.createElement("div");
-    messageDiv.className = `message ${sender}-message`;
-    messageDiv.innerHTML = `<div class="message-text">${text}</div>`;
-    messagesContainer.appendChild(messageDiv);
-    messagesContainer.scrollTop = messagesContainer.scrollHeight;
+  const messagesContainer = document.getElementById("messages");
+  const messageDiv = document.createElement("div");
+  messageDiv.className = `message ${sender}-message`;
+  messageDiv.innerHTML = `<div class="message-text">${text}</div>`;
+  messagesContainer.appendChild(messageDiv);
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
