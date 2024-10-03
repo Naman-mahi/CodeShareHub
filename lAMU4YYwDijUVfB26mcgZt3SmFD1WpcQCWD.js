@@ -92,15 +92,14 @@ function createChatWidget(agentImageUrl,agentName,websiteDeveloper) {
                 position: fixed;
                 bottom: 20px;
                 right: 20px;
-                background-color: #28a745; 
                 color: white;
                 border: none;
                 border-radius: 50%; 
                 padding: 15px;
                 cursor: pointer;
                 z-index: 9999; 
-                width: 60px; 
-                height: 60px; 
+                width: 45px; 
+                height: 45px; 
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -128,7 +127,7 @@ function createChatWidget(agentImageUrl,agentName,websiteDeveloper) {
 
     const chatButton = document.createElement("button");
     chatButton.className = "chat-button";
-    chatButton.innerHTML = '<i class="fas fa-comment"></i>';
+    chatButton.innerHTML = '<i class="fa-duotone fa-solid fa-headset" style="--fa-primary-color: #bd0555; --fa-secondary-color: #bd0555;"></i>';
     chatButton.onclick = toggleChat;
     document.body.appendChild(chatButton);
 
