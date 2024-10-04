@@ -184,216 +184,235 @@ document.addEventListener("DOMContentLoaded", function () {
           lowerText.includes("hi") ||
           lowerText.includes("hey")
         ) {
-          agentResponse = "Hello there! How can I help you today?";
+          agentResponse = "Hello there! Welcome to Digital Dynamo! How can I assist you today?";
         } else if (
           lowerText.includes("price") ||
           lowerText.includes("cost") ||
           lowerText.includes("fees")
         ) {
           agentResponse =
-            "Our pricing varies depending on the project scope and complexity. Please tell me more about your needs, and I can provide you with a customized quote.";
+            "At Digital Dynamo, our pricing varies based on project scope and complexity. Please share more about your needs, and I can provide a customized quote.";
         } else if (
           lowerText.includes("services") ||
           lowerText.includes("what do you do") ||
-          lowerText.includes("offer")
+          lowerText.includes("offer") ||
+          lowerText.includes("types of services")
         ) {
           agentResponse =
-            "We offer a wide range of software services, including application development, website design & development, e-commerce solutions, and more. What are you interested in?";
+            "Digital Dynamo offers a wide range of services, including:\n1. **Web Development**\n2. **Graphic Design**\n3. **E-commerce Solutions**\n4. **Mobile App Development**\n5. **AI Solutions**\n6. **Cloud Services**\n7. **Digital Marketing**. What specific service are you interested in?";
         } else if (
           lowerText.includes("app development") ||
           lowerText.includes("mobile app")
         ) {
           agentResponse =
-            "We excel at building high-quality mobile and web applications. Do you have a specific platform in mind (iOS, Android, or web)?";
+            "We specialize in high-quality mobile and web applications at Digital Dynamo. Do you have a specific platform in mind (iOS, Android, or web)?";
         } else if (
           lowerText.includes("website") ||
           lowerText.includes("web design")
         ) {
           agentResponse =
-            "We can create stunning and functional websites tailored to your business needs. Do you have a particular design style in mind?";
+            "Digital Dynamo creates visually stunning and highly functional websites tailored to your business needs. Do you have a design style in mind?";
         } else if (
           lowerText.includes("e-commerce") ||
           lowerText.includes("online store")
         ) {
           agentResponse =
-            "We can help you set up a robust and user-friendly e-commerce store. Are you looking to integrate with any specific platforms?";
-        } else if (lowerText.includes("Naman Khobragade")) {
+            "We can help you establish a user-friendly e-commerce store at Digital Dynamo. Are there any specific platforms you’re looking to integrate with?";
+        } else if (
+          lowerText.includes("ai") ||
+          lowerText.includes("artificial intelligence")
+        ) {
           agentResponse =
-            "Naman is our founder and CEO. He's a visionary leader with a passion for technology and innovation!";
+            "Digital Dynamo offers various AI solutions, including:\n1. **Machine Learning Models**\n2. **Natural Language Processing**\n3. **AI Chatbots**\n4. **Predictive Analytics**. Which area are you interested in exploring?";
+        } else if (
+          lowerText.includes("data analysis") ||
+          lowerText.includes("data science")
+        ) {
+          agentResponse =
+            "We provide comprehensive data analysis and visualization services at Digital Dynamo. Are you looking for insights into specific data sets?";
+        } else if (
+          lowerText.includes("seo") ||
+          lowerText.includes("search engine optimization")
+        ) {
+          agentResponse =
+            "Our SEO services at Digital Dynamo aim to enhance your website's visibility on search engines. Would you like a detailed strategy?";
+        } else if (
+          lowerText.includes("social media") ||
+          lowerText.includes("marketing")
+        ) {
+          agentResponse =
+            "We offer social media marketing services to boost your online presence. Which platforms are you interested in?";
+        } else if (lowerText.includes("naman khobragade")) {
+          agentResponse =
+            "Naman Khobragade is our founder and CEO at Digital Dynamo, a visionary leader passionate about technology and innovation!";
         } else if (
           lowerText.includes("support") ||
           lowerText.includes("help")
         ) {
           agentResponse =
-            "We're here to help! Please provide more details about the support you need.";
+            "We're here to assist you at Digital Dynamo! Please provide more details about the support you need.";
         } else if (
           lowerText.includes("contact") ||
           lowerText.includes("reach")
         ) {
           agentResponse =
-            "You can reach us at contact@example.com or through our website's contact form.";
+            "You can reach us at +917498950562 or skhobragade@gmail.com. You can also contact us through our website's contact form.";
         } else if (lowerText.includes("hours") || lowerText.includes("open")) {
           agentResponse =
-            "Our office hours are Monday to Friday, 9 AM to 5 PM. How can I assist you further?";
+            "Digital Dynamo's office hours are Monday to Friday, 9 AM to 5 PM. How else can I assist you?";
         } else if (
           lowerText.includes("location") ||
           lowerText.includes("address")
         ) {
           agentResponse =
-            "We are located at 123 Main Street, Hometown, USA. Feel free to visit us!";
+            "We are located at 44, Hyderabad, India. Feel free to visit us at Digital Dynamo!";
         } else if (
           lowerText.includes("feedback") ||
           lowerText.includes("review")
         ) {
           agentResponse =
-            "We value your feedback! Please let us know what you think about our services.";
+            "We value your feedback at Digital Dynamo! Please share your thoughts on our services.";
         } else if (
           lowerText.includes("careers") ||
           lowerText.includes("jobs")
         ) {
           agentResponse =
-            "We're always looking for talented individuals! Check our careers page for current openings.";
+            "We're always looking for talented individuals! Check our careers page at Digital Dynamo for current openings.";
         } else if (
           lowerText.includes("portfolio") ||
           lowerText.includes("projects")
         ) {
           agentResponse =
-            "You can view our portfolio on our website. It showcases our recent projects and achievements.";
+            "You can view our portfolio on the Digital Dynamo website, showcasing our recent projects and achievements.";
         } else if (
           lowerText.includes("testimonials") ||
           lowerText.includes("reviews")
         ) {
           agentResponse =
-            "Our clients often share their experiences on our testimonials page. Would you like to know more?";
+            "Our clients often share their experiences on our testimonials page. Would you like to see some from Digital Dynamo?";
         } else if (
           lowerText.includes("refund") ||
           lowerText.includes("policy")
         ) {
           agentResponse =
-            "Our refund policy varies by project type. Please check our website or provide more details for specific information.";
+            "Our refund policy at Digital Dynamo varies by project type. Please check our website or provide more details for specific information.";
         } else if (
           lowerText.includes("security") ||
           lowerText.includes("data protection")
         ) {
           agentResponse =
-            "We take security seriously. Our services comply with the latest data protection regulations to keep your information safe.";
+            "We prioritize security at Digital Dynamo and comply with the latest data protection regulations to keep your information safe.";
         } else if (
           lowerText.includes("integration") ||
           lowerText.includes("third-party")
         ) {
           agentResponse =
-            "We offer various integration services with popular third-party platforms. Which platform are you interested in?";
+            "We offer integration services with various third-party platforms at Digital Dynamo. Which platform are you interested in?";
         } else if (
           lowerText.includes("customization") ||
           lowerText.includes("custom")
         ) {
           agentResponse =
-            "We can tailor our solutions to meet your specific requirements. What features are you looking for?";
+            "We can tailor our solutions at Digital Dynamo to meet your specific requirements. What features are you looking for?";
         } else if (
           lowerText.includes("training") ||
           lowerText.includes("support")
         ) {
           agentResponse =
-            "We provide training and support to ensure you get the most out of our services. Would you like to know more?";
+            "We provide training and support at Digital Dynamo to help you maximize our services. Would you like more information?";
         } else if (
           lowerText.includes("partnership") ||
           lowerText.includes("collaboration")
         ) {
           agentResponse =
-            "We love partnering with other businesses! Please share your ideas, and we can discuss potential collaboration.";
+            "We love collaborating with other businesses at Digital Dynamo! Please share your ideas, and we can explore potential partnerships.";
         } else if (
           lowerText.includes("updates") ||
           lowerText.includes("news")
         ) {
           agentResponse =
-            "Stay tuned for our latest updates! You can also subscribe to our newsletter on our website.";
+            "Stay tuned for our latest updates from Digital Dynamo! You can also subscribe to our newsletter for news.";
         } else if (
           lowerText.includes("events") ||
           lowerText.includes("webinars")
         ) {
           agentResponse =
-            "We host various events and webinars. Check our events page for upcoming schedules!";
+            "We host various events and webinars at Digital Dynamo. Check our events page for upcoming schedules!";
         } else if (
           lowerText.includes("terms") ||
           lowerText.includes("conditions")
         ) {
           agentResponse =
-            "You can find our terms and conditions on our website. Would you like me to summarize them?";
+            "You can find our terms and conditions on the Digital Dynamo website. Would you like me to summarize them?";
         } else if (
           lowerText.includes("privacy") ||
           lowerText.includes("policy")
         ) {
           agentResponse =
-            "We have a comprehensive privacy policy detailing how we handle your data. You can find it on our website.";
+            "We have a comprehensive privacy policy at Digital Dynamo detailing how we handle your data. You can find it on our website.";
         } else if (
           lowerText.includes("payment") ||
           lowerText.includes("methods")
         ) {
           agentResponse =
-            "We accept various payment methods, including credit cards and bank transfers. Please check our payment page for details.";
+            "We accept various payment methods at Digital Dynamo, including credit cards and bank transfers. Please check our payment page for details.";
         } else if (lowerText.includes("demo") || lowerText.includes("trial")) {
           agentResponse =
-            "We offer demos and trial periods for many of our services. Would you like to schedule one?";
+            "We offer demos and trial periods for many of our services at Digital Dynamo. Would you like to schedule one?";
         } else if (
           lowerText.includes("technical support") ||
           lowerText.includes("issues")
         ) {
           agentResponse =
-            "If you're experiencing technical issues, please provide details so we can assist you better.";
-        } else if (
-          lowerText.includes("updates") ||
-          lowerText.includes("new features")
-        ) {
-          agentResponse =
-            "We regularly update our services. You can check our blog for the latest features and enhancements.";
+            "If you're experiencing technical issues, please provide details so we at Digital Dynamo can assist you better.";
         } else if (
           lowerText.includes("community") ||
           lowerText.includes("forum")
         ) {
           agentResponse =
-            "Join our community forum to connect with other users and share experiences!";
+            "Join our community forum at Digital Dynamo to connect with other users and share experiences!";
         } else if (
           lowerText.includes("newsletter") ||
           lowerText.includes("subscribe")
         ) {
           agentResponse =
-            "You can subscribe to our newsletter on our website for updates and news!";
+            "You can subscribe to our newsletter on the Digital Dynamo website for updates and news!";
         } else if (
           lowerText.includes("usage") ||
           lowerText.includes("guidelines")
         ) {
           agentResponse =
-            "We provide usage guidelines for our services. You can find detailed documentation on our website.";
+            "We provide usage guidelines for our services at Digital Dynamo. You can find detailed documentation on our website.";
         } else if (
           lowerText.includes("api") ||
           lowerText.includes("integration")
         ) {
           agentResponse =
-            "We offer API access for integration with your systems. Would you like more information?";
+            "We offer API access for integration with your systems at Digital Dynamo. Would you like more information?";
         } else if (
           lowerText.includes("cloud services") ||
           lowerText.includes("hosting")
         ) {
           agentResponse =
-            "We provide secure cloud hosting services. Would you like to learn more about our hosting plans?";
+            "We provide secure cloud hosting services at Digital Dynamo. Would you like to learn more about our hosting plans?";
         } else if (
           lowerText.includes("mobile compatibility") ||
           lowerText.includes("responsive")
         ) {
           agentResponse =
-            "All our services are designed to be mobile-friendly and responsive. Do you have a specific requirement in mind?";
+            "All our services at Digital Dynamo are designed to be mobile-friendly and responsive. Do you have specific requirements in mind?";
         } else if (
           lowerText.includes("analytics") ||
           lowerText.includes("tracking")
         ) {
           agentResponse =
-            "We provide analytics tools to help you track your performance. Would you like to know more about our analytics services?";
+            "We provide analytics tools to help you track your performance at Digital Dynamo. Would you like to know more about our analytics services?";
         } else if (
           lowerText.includes("advertising") ||
           lowerText.includes("marketing")
         ) {
           agentResponse =
-            "We offer various marketing and advertising solutions. What kind of services are you interested in?";
+            "We offer various marketing and advertising solutions at Digital Dynamo. What kind of services are you interested in?";
         } else if (
           lowerText.includes("scheduling") ||
           lowerText.includes("appointment")
@@ -411,7 +430,7 @@ document.addEventListener("DOMContentLoaded", function () {
           lowerText.includes("global")
         ) {
           agentResponse =
-            "We provide services internationally. Please share your location, and we can discuss availability.";
+            "We provide services internationally at Digital Dynamo. Please share your location, and we can discuss availability.";
         } else if (
           lowerText.includes("community") ||
           lowerText.includes("users")
@@ -419,16 +438,16 @@ document.addEventListener("DOMContentLoaded", function () {
           agentResponse =
             "Join our user community for tips, tricks, and support from other users!";
         } else if (
-            lowerText.includes("sunil") ||
-            lowerText.includes("khobragade") ||
-            lowerText.includes("naman") ||
-            lowerText.includes("naman khobragade") ||
-            lowerText.includes("developer") ||
-            lowerText.includes("creator") ||
-            lowerText.includes("founder")
+          lowerText.includes("sunil") ||
+          lowerText.includes("khobragade") ||
+          lowerText.includes("naman") ||
+          lowerText.includes("naman khobragade") ||
+          lowerText.includes("developer") ||
+          lowerText.includes("creator") ||
+          lowerText.includes("founder")
         ) {
           agentResponse =
-            "Sunil Khobragade is the brilliant mind behind my development! He’s dedicated to creating a seamless experience for you.";
+            "Sunil Khobragade is the brilliant mind behind my development at Digital Dynamo! He’s dedicated to creating a seamless experience for you.";
         } else if (
           lowerText.includes("video tutorials") ||
           lowerText.includes("learning")
@@ -437,8 +456,9 @@ document.addEventListener("DOMContentLoaded", function () {
             "We have a series of video tutorials available on our website. Would you like to see a specific topic?";
         } else {
           agentResponse =
-            "Thanks for your message! I'm still under development, but I'm learning more every day. Feel free to ask me anything about our services.";
+            "Thanks for your message! I'm still learning, but I'm here to assist you with anything related to Digital Dynamo's services.";
         }
+        
 
         displayMessage(agentResponse, "agent");
       }, 1000);
