@@ -81,7 +81,7 @@ function getAgentResponse(messageText) {
         lowerText.includes("location") ||
         lowerText.includes("address")
     ) {
-        return "We are located at 123 Main Street, Hometown, USA. Feel free to visit us!";
+        return "We are located at 29 Amberpet Hyderabad, India. Feel free to visit us!";
     } else if (
         lowerText.includes("feedback") ||
         lowerText.includes("review")
